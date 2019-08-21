@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href=css/main.css>
+		<title>todo</title>
+	</head>
+	<body>
+		<div id="app">
+		  <h2>
+		    TO do list
+		  </h2>
+		  <form v-on:submit.prevent>
+		    <input type="text" v-model="newItem">
+		    <button v-on:click="additem">
+		      add
+		    </button>
+		  </form>
+		  <ul>
+		    <li v-for="(todo,index) in todos">
+		      <input type="checkbox" v-model="todo.isdone">
+		      <span v-bind:class="{done:todo.isdone}">{{todo.item}}</span>
+		      <button v-on:click="deleatitem(index)">deleat</button>
+		    </li>
+		  </ul>
+		  <br>
+		  <!--<pre>{{ $data }}</pre>-->
+
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
