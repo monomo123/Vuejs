@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+#app ul {
+  list-style-type: none;
+}
+
+#app li>span.done {
+  text-decoration: line-through;
+}
